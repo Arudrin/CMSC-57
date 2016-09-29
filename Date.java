@@ -1,6 +1,7 @@
 /* Written by Aldrin Manus  **/
 
-public class Date{
+public class Date
+{
 	
 
 
@@ -15,7 +16,8 @@ public class Date{
 
 
 
-		Date(){
+		Date()
+		{
 
 			this.day = 1;
 			this.month = 1;
@@ -26,7 +28,8 @@ public class Date{
 			this.errorDay = false;
 		}
 
-		Date( int x, int y, int z){
+		Date( int x, int y, int z)
+		{
 
 			this.year = x;
 			this.month = y;
@@ -34,7 +37,8 @@ public class Date{
 		}
 
 
-		private void errorPrinter( boolean errorYear, boolean errorMonthDay, boolean errorDay, boolean errorMonth ){
+		private void errorPrinter( boolean errorYear, boolean errorMonthDay, boolean errorDay, boolean errorMonth )
+		{
 
 			if(errorYear == true && errorMonth == true && errorDay == true )
 			{
@@ -74,27 +78,32 @@ public class Date{
 
 		}
 
-		public int getYear(){
+		public int getYear()
+		{
 
 			return this.year;
 
 		}
 
-		public int getMonth(){
+		public int getMonth()
+		{
 
 			return this.month;
 
 		}
 
-		public int getDay(){
+		public int getDay()
+		{
 
 			return this.day;
 
 		}
 
-		public void setYear( int year ){
+		public void setYear( int year )
+		{
 
-			if( year >= 1000 || year <= 9999){
+			if( year >= 1000 || year <= 9999)
+			{
 
 				this.year = year;
 
@@ -108,7 +117,8 @@ public class Date{
 
 		}
 
-		public void setMonth( int month ){
+		public void setMonth( int month )
+		{
 
 			if( month >= 1 && month <= 12)
 			{
@@ -150,9 +160,11 @@ public class Date{
 
 		}
 
-		public void setDay( int day ){
+		public void setDay( int day )
+		{
 
-			if( day >= 1 && day <= 31){
+			if( day >= 1 && day <= 31)
+			{
 
 				if( day == 31 )
 				{
@@ -191,7 +203,8 @@ public class Date{
 
 		}
 
-		public String toString(){
+		public String toString()
+		{
 			if(day < 10 && month < 10 ){
 				String formation = String.format("0%d/0%d/%d",day,month,year);
 				return formation;
@@ -212,9 +225,11 @@ public class Date{
 
 		}
 
-		public void setDate( int year, int month, int day ){
+		public void setDate( int year, int month, int day )
+		{
 
-			if( year >= 1000 && year <= 9999){ // Error checking for year
+			if( year >= 1000 && year <= 9999)
+			{ // Error checking for year
 
 				this.year = year;
 
